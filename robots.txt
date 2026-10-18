@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://p-8d41b21e8c.sgrdt.cn/sitemap.xml

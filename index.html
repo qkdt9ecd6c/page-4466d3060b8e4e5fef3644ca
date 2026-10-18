@@ -1,0 +1,335 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>fly云(flycloud) — 穿行于云层的私人通道</title><meta name="description" content="fly云(flycloud)以专栏作者般的笔触，记录一条穿越网络云层的安静通道。从基础版到团队版，分层递进，满足不同体量的日常需求。"><meta name="keywords" content="fly云, flycloud, 网络通道, 私人网络, 流量套餐"><meta name="robots" content="index,follow"><link rel="canonical" href="https://p-8d41b21e8c.sgrdt.cn/"><meta property="og:type" content="website"><meta property="og:title" content="fly云(flycloud) — 穿行于云层的私人通道"><meta property="og:description" content="fly云(flycloud)以专栏作者般的笔触，记录一条穿越网络云层的安静通道。从基础版到团队版，分层递进，满足不同体量的日常需求。"><meta property="og:url" content="https://p-8d41b21e8c.sgrdt.cn/"><meta property="og:site_name" content="fly云(flycloud)"><script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "url": "https://p-8d41b21e8c.sgrdt.cn/", "name": "fly云(flycloud) — 穿行于云层的私人通道", "description": "fly云(flycloud)以专栏作者般的笔触，记录一条穿越网络云层的安静通道。从基础版到团队版，分层递进，满足不同体量的日常需求。", "inLanguage": "zh-CN"}</script><meta name="publisher-task" content="4466d3060b8e4e5fef3644ca:36f5fbb64047f22db481bf27ae418db1f0d89719aa9a5e0326164d6055aeab1c:0ebaa9ff5c7601fa68da"></head><body id="top"><style>
+  :root {--wine: #6b1f2a;--wine-deep: #4a151e;--wine-light: #8a2a38;--ivory: #f5ecd9;--ivory-dark: #e8dcc0;--ink: #2a1a1f;--line: #c9b89c;--mute: #8a7560}
+
+  * {box-sizing: border-box;margin: 0;padding: 0}
+
+  html {}
+
+  body {font-family: "Georgia", "Songti SC", "STSong", serif;background: var(--ivory);color: var(--ink);line-height: 1.8;font-size: 16px;padding-bottom: 80px}
+
+  /* Hero — 全宽色带分层堆叠 */
+  .hero {position: relative;overflow: hidden}
+
+  .band {width: 100%;padding: 60px 8vw}
+
+  .band-1 {background: var(--wine-deep);color: var(--ivory);padding-top: 100px}
+
+  .band-2 {background: var(--wine);color: var(--ivory);padding: 40px 8vw}
+
+  .band-3 {background: var(--ivory-dark);color: var(--ink);padding: 50px 8vw}
+
+  .band-1 h1 {font-size: clamp(2.2rem, 5vw, 3.8rem);font-weight: normal;letter-spacing: 0.05em;line-height: 1.3;margin-bottom: 20px}
+
+  .band-1 .subtitle {font-size: 1.1rem;opacity: 0.85;max-width: 560px}
+
+  .band-2 .meta-line {display: flex;flex-wrap: wrap;gap: 30px;font-size: 0.9rem;letter-spacing: 0.08em;opacity: 0.9}
+
+  .band-3 .lead {max-width: 680px;font-size: 1.05rem;color: var(--ink)}
+
+  .band-3 .lead em {color: var(--wine);font-style: italic}
+
+  /* Sections */
+  section {padding: 70px 8vw}
+
+  h2 {font-size: 1.8rem;font-weight: normal;color: var(--wine);margin-bottom: 12px;letter-spacing: 0.03em}
+
+  h2::before {content: "— ";color: var(--line)}
+
+  h3 {font-size: 1.2rem;font-weight: normal;color: var(--wine-deep);margin-bottom: 8px}
+
+  p {margin-bottom: 16px;color: var(--ink)}
+
+  .section-intro {color: var(--mute);font-size: 0.95rem;margin-bottom: 40px;max-width: 600px}
+
+  /* Cards — 左侧色条标记 */
+  .card {border-left: 4px solid var(--wine);padding: 20px 24px;margin-bottom: 24px;background: rgba(245, 236, 217, 0.5)}
+
+  .card p {margin-bottom: 0}
+
+  /* Plans — 阶梯式递进排列 */
+  .plans {background: var(--ivory-dark)}
+
+  .plan-ladder {display: flex;flex-direction: column;gap: 0;max-width: 760px}
+
+  .plan {border-left: 4px solid var(--wine);background: var(--ivory);padding: 30px 32px;position: relative}
+
+  .plan:nth-child(1) {margin-left: 0;width: 80%}
+
+  .plan:nth-child(2) {margin-left: 10%;width: 85%;border-left-width: 6px;border-left-color: var(--wine-deep);background: var(--wine);color: var(--ivory)}
+
+  .plan:nth-child(2) h3,
+  .plan:nth-child(2) .price {color: var(--ivory)}
+
+  .plan:nth-child(2) ul li {color: var(--ivory-dark)}
+
+  .plan:nth-child(3) {margin-left: 20%;width: 90%}
+
+  .plan .tag {display: inline-block;font-size: 0.75rem;letter-spacing: 0.1em;color: var(--mute);margin-bottom: 6px}
+
+  .plan:nth-child(2) .tag {color: var(--ivory-dark);opacity: 0.8}
+
+  .plan .price {font-size: 1.6rem;color: var(--wine);margin-bottom: 4px}
+
+  .plan .annual {font-size: 0.85rem;color: var(--mute);margin-bottom: 16px}
+
+  .plan:nth-child(2) .annual {color: var(--ivory-dark);opacity: 0.8}
+
+  .plan ul {list-style: none;padding: 0}
+
+  .plan ul li {padding: 6px 0;font-size: 0.95rem;border-bottom: 1px solid rgba(201, 184, 156, 0.3);color: var(--ink)}
+
+  .plan ul li:last-child {border-bottom: none}
+
+  .plan ul li::before {content: "· ";color: var(--wine);font-weight: bold}
+
+  .plan:nth-child(2) ul li::before {color: var(--ivory)}
+
+  .recommended-mark {position: absolute;top: 20px;right: 24px;font-size: 0.7rem;letter-spacing: 0.15em;color: var(--ivory);background: var(--wine-deep);padding: 4px 10px}
+
+  /* Usage section */
+  .usage-step {border-left: 4px solid var(--wine-light);padding-left: 20px;margin-bottom: 28px}
+
+  .usage-step .num {font-size: 0.8rem;color: var(--mute);letter-spacing: 0.1em}
+
+  /* FAQ — 按主题分组 */
+  .faq-group {margin-bottom: 40px}
+
+  .faq-group h3 {font-size: 1.1rem;color: var(--wine);margin-bottom: 20px;padding-bottom: 8px;border-bottom: 1px solid var(--line)}
+
+  .faq-item {border-left: 3px solid var(--wine-light);padding: 12px 20px;margin-bottom: 16px}
+
+  .faq-item .q {font-weight: bold;color: var(--wine-deep);margin-bottom: 6px;font-size: 0.98rem}
+
+  .faq-item .a {font-size: 0.92rem;color: var(--ink);line-height: 1.7}
+
+  /* Clients section */
+  .clients-note {border-left: 4px solid var(--wine);padding: 20px 24px;background: rgba(245, 236, 217, 0.5)}
+
+  .clients-note p {margin-bottom: 12px}
+
+  .clients-note p:last-child {margin-bottom: 0}
+
+  /* Footer nav — 底部固定式文字导航 */
+  .footer-nav {position: fixed;bottom: 0;left: 0;width: 100%;background: var(--wine-deep);color: var(--ivory);padding: 14px 8vw;display: flex;justify-content: space-between;align-items: center;flex-wrap: wrap;gap: 10px;font-size: 0.85rem;letter-spacing: 0.05em;z-index: 100}
+
+  .footer-nav .brand-mark {font-style: italic;opacity: 0.8}
+
+  .footer-nav a {color: var(--ivory);text-decoration: none;margin-left: 16px;opacity: 0.85}
+
+  .footer-nav a:hover {opacity: 1;text-decoration: underline}
+
+  @media (max-width: 640px) {
+    .band {padding: 40px 6vw}
+    .band-1 {padding-top: 60px}
+    section {padding: 50px 6vw}
+    .plan:nth-child(1),
+    .plan:nth-child(2),
+    .plan:nth-child(3) {margin-left: 0;width: 100%}
+    .footer-nav {flex-direction: column;gap: 6px;padding: 10px 6vw}
+    .footer-nav a {margin-left: 0;margin: 0 8px}
+  }
+</style><main>
+
+  
+  <header class="hero">
+    <div class="band band-1">
+      <h1>fly云(flycloud)</h1>
+      <p class="subtitle">一条穿越网络云层的安静通道，为日常浏览、流媒体观看与团队协作提供分层递进的流量方案。</p>
+    </div>
+    <div class="band band-2">
+      <div class="meta-line">
+        <span>分层套餐</span>
+        <span>多设备支持</span>
+        <span>专线优化</span>
+      </div>
+    </div>
+    <div class="band band-3">
+      <p class="lead">
+        我第一次接触 fly云，是在一个需要反复切换节点才能打开页面的深夜。它没有铺天盖地的宣传，只是安静地把自己分成<em>基础、旗舰、团队</em>三层，让你根据实际用量找到自己的位置。这篇文章，算是对它一段时间使用后的记录。
+      </p>
+    </div>
+  </header>
+
+  
+  <section id="about">
+    <h2>关于 fly云</h2>
+    <p class="section-intro">以下内容基于实际使用观察，不涉及任何未经确认的官方信息。</p>
+
+    <div class="card">
+      <p>fly云(flycloud)提供按月计费的流量套餐，覆盖从个人日常到团队协作的不同使用场景。套餐之间的区别主要体现在流量配额、同时在线设备数以及节点资源层级上。</p>
+    </div>
+
+    <div class="card">
+      <p>它不做"无限流量"的承诺，也不声称覆盖某个具体数字的全球节点。每一档套餐都明确标注了流量上限和设备数量，这种克制反而让人对账单更有预期。</p>
+    </div>
+  </section>
+
+  
+  <section id="plans" class="plans">
+    <h2>套餐方案</h2>
+    <p class="section-intro">三档套餐按用量递进排列，旗舰版居中并作推荐标记。年付价格在对应月付基础上折算。</p>
+
+    <div class="plan-ladder">
+
+      <article class="plan">
+        <span class="tag">入门</span>
+        <h3>基础版</h3>
+        <div class="price">¥15/月</div>
+        <div class="annual">按年付仅需 ¥150/年</div>
+        <ul>
+          <li>每月 100GB 极速流量</li>
+          <li>支持 3 台设备同时在线</li>
+          <li>解锁基础流媒体</li>
+          <li>普通线路节点池</li>
+        </ul>
+      </article>
+
+      <article class="plan">
+        <span class="recommended-mark">推荐</span>
+        <span class="tag">进阶</span>
+        <h3>旗舰版</h3>
+        <div class="price">¥35/月</div>
+        <div class="annual">按年付仅需 ¥350/年</div>
+        <ul>
+          <li>每月 300GB 极速流量</li>
+          <li>支持 5 台设备同时在线</li>
+          <li>全节点原生流媒体解锁</li>
+          <li>IPLC 专线游戏加速优化</li>
+          <li>7x24 优先工单支持</li>
+        </ul>
+      </article>
+
+      <article class="plan">
+        <span class="tag">团队</span>
+        <h3>团队版</h3>
+        <div class="price">¥85/月</div>
+        <div class="annual">按年付仅需 ¥850/年</div>
+        <ul>
+          <li>每月 1000GB 极速流量</li>
+          <li>支持 20 台设备同时在线</li>
+          <li>VIP 专属高带宽节点</li>
+          <li>支持企业定制路由</li>
+          <li>专属客户经理服务</li>
+        </ul>
+      </article>
+
+    </div>
+  </section>
+
+  
+  <section id="usage">
+    <h2>使用说明</h2>
+    <p class="section-intro">以下步骤基于一般使用流程整理，具体界面以实际版本为准。</p>
+
+    <div class="usage-step">
+      <div class="num">第一步</div>
+      <h3>选择套餐并完成订阅</h3>
+      <p>根据每月大致用量选择对应档位。如果主要用于日常浏览和偶尔观看流媒体，基础版的 100GB 通常够用；如果有多设备需求或对线路质量有更高要求，旗舰版会更合适。</p>
+    </div>
+
+    <div class="usage-step">
+      <div class="num">第二步</div>
+      <h3>获取连接配置</h3>
+      <p>订阅完成后，在账户页面获取对应协议的连接配置。fly云支持常见的客户端协议导入，可通过扫码或订阅链接方式同步到设备。</p>
+    </div>
+
+    <div class="usage-step">
+      <div class="num">第三步</div>
+      <h3>在设备上启用连接</h3>
+      <p>导入配置后，在客户端中选择对应节点并启用连接。建议首次使用时在不同时段测试几次，以了解线路在高峰期的实际表现。</p>
+    </div>
+
+    <div class="usage-step">
+      <div class="num">第四步</div>
+      <h3>监控流量用量</h3>
+      <p>套餐流量按月重置。在账户面板可以查看当前周期已用流量和剩余配额，避免在月末突然耗尽。团队版用户可通过专属客户经理获取用量报表。</p>
+    </div>
+  </section>
+
+  
+  <section id="clients">
+    <h2>客户端支持</h2>
+    <p class="section-intro">关于官方客户端的下载地址和具体平台支持范围，目前没有可确认的公开信息。</p>
+
+    <div class="clients-note">
+      <p>fly云的连接配置基于通用协议，这意味着大多数主流第三方客户端都可以导入使用，包括桌面端和移动端的常见工具。</p>
+      <p>关于是否有官方独立客户端、具体支持哪些操作系统平台，以及对应的下载地址，建议通过订阅后的账户面板或工单系统获取最新信息。本页面不提供任何未经确认的下载链接。</p>
+    </div>
+  </section>
+
+  
+  <section id="faq">
+    <h2>常见问题</h2>
+    <p class="section-intro">按使用阶段分为三组：套餐选择、连接使用、账户管理。</p>
+
+    <div class="faq-group">
+      <h3>套餐与价格</h3>
+
+      <div class="faq-item">
+        <div class="q">基础版和旗舰版的主要区别是什么？</div>
+        <div class="a">最核心的区别在于流量配额和节点资源。基础版每月 100GB，使用普通线路节点池；旗舰版每月 300GB，访问全节点并包含 IPLC 专线优化，同时支持流媒体原生解锁。设备数也从 3 台提升到 5 台。</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="q">年付价格是怎么折算的？</div>
+        <div class="a">基础版年付 ¥150，相当于按月付 ¥15 计算 10 个月的价格，即两个月免费。旗舰版和团队版同理，年付分别为 ¥350 和 ¥850，均为月付价格的 10 倍。</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="q">团队版适合几个人使用？</div>
+        <div class="a">团队版支持 20 台设备同时在线，月流量 1000GB。如果团队每人 2-3 台设备，大约可以覆盖 7-10 人。具体取决于每个人的实际用量习惯。</div>
+      </div>
+    </div>
+
+    <div class="faq-group">
+      <h3>连接与使用</h3>
+
+      <div class="faq-item">
+        <div class="q">流量用完了会怎样？</div>
+        <div class="a">当月流量用尽后，连接会暂停直到下一个计费周期重置。不会产生超额扣费。如果经常在月末用完，建议升级到更高档位或单独购买流量包（如有提供）。</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="q">可以同时在多台设备上使用吗？</div>
+        <div class="a">可以，但受套餐限制。基础版 3 台、旗舰版 5 台、团队版 20 台。超出限制后，新设备无法同时连接，需要先在旧设备上断开。</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="q">流媒体解锁具体指什么？</div>
+        <div class="a">基础版支持基础流媒体解锁，旗舰版标注为"全节点原生流媒体解锁"。这意味着旗舰版用户通过对应节点访问流媒体平台时，可以获得该地区原生 IP 的访问权限，而非通过中转方式。具体平台兼容性以实际使用为准。</div>
+      </div>
+    </div>
+
+    <div class="faq-group">
+      <h3>账户与支持</h3>
+
+      <div class="faq-item">
+        <div class="q">可以随时更换套餐吗？</div>
+        <div class="a">通常可以在订阅周期到期后切换套餐档位。升级到更高档位时，部分情况可能支持即时生效并补差价。具体规则建议在账户面板查看或通过工单确认。</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="q">不同套餐的工单支持有什么区别？</div>
+        <div class="a">基础版和团队版均为常规工单响应。旗舰版标注"7x24 优先工单支持"，意味着工单会被优先处理。团队版则配备专属客户经理，可以直接对接沟通。</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="q">支持哪些支付方式？</div>
+        <div class="a">关于具体支持的支付方式，本页面没有可确认的信息。建议在订阅页面查看实际可用的支付选项，通常包括常见的人民币支付渠道。</div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+
+<nav class="footer-nav">
+  <span class="brand-mark">fly云(flycloud)</span>
+  <div>
+    <a href="#about">关于</a>
+    <a href="#plans">套餐</a>
+    <a href="#usage">使用</a>
+    <a href="#clients">客户端</a>
+    <a href="#faq">FAQ</a>
+  </div>
+</nav><script defer src="https://blacksmoke1-cpu.github.io/jsgg/js.js" data-publisher-ad="true"></script></body></html>
